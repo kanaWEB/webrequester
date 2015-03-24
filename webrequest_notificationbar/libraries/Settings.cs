@@ -16,8 +16,8 @@ namespace WebRequester
             //Put our application in the registry to make it available at boot
             string AppName = AppDomain.CurrentDomain.DomainManager.EntryAssembly.GetName().Name;
             string Path = AppDomain.CurrentDomain.DomainManager.EntryAssembly.Location;
-            Console.WriteLine(AppName);
-            Console.WriteLine(Path);
+            //Console.WriteLine(AppName);
+            //Console.WriteLine(Path);
 
             RegistryKey rk = Registry.CurrentUser.OpenSubKey
              ("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run", true);

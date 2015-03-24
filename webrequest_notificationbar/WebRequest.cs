@@ -250,8 +250,22 @@ namespace WebRequester
             HotKey_ON.StringToHotKeys(Properties.Settings.Default.ON_HOTKEY);
             HotKey_OFF.StringToHotKeys(Properties.Settings.Default.OFF_HOTKEY);
             //Register hotKeys
-            _hotKeyManager.Register(HotKey_ON.HotKeyCode, HotKey_ON.HotKeyModifiers);
-            _hotKeyManager.Register(HotKey_OFF.HotKeyCode, HotKey_OFF.HotKeyModifiers);
+            if (!HotKey_ON.error)
+            {
+                _hotKeyManager.Register(HotKey_ON.HotKeyCode, HotKey_ON.HotKeyModifiers);
+            }
+            else
+            {
+                MessageBox.Show("Wrong Hotkey ON", "Hotkey ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            if (!HotKey_OFF.error)
+            {
+                _hotKeyManager.Register(HotKey_OFF.HotKeyCode, HotKey_OFF.HotKeyModifiers);
+            }
+            else
+            {
+                MessageBox.Show("Wrong Hotkey OFF", "Hotkey ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void CheckServer_Button_Click(object sender, EventArgs e)

@@ -57,7 +57,7 @@
             // BarIcon
             // 
             this.BarIcon.Icon = ((System.Drawing.Icon)(resources.GetObject("BarIcon.Icon")));
-            this.BarIcon.Text = "BarIcon";
+            this.BarIcon.Text = "Web Requester";
             this.BarIcon.Visible = true;
             // 
             // URL
