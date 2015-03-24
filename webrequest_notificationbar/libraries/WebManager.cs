@@ -19,7 +19,7 @@ namespace WebRequester
     {
         const string POST_TOKEN = "token=";
         const string TOKEN_LINK = "/token.php";
-        const string ACTION_LINK = "api/v1/action/";
+        const string ACTION_LINK = "/api/v1/action/";
 
         //Manage Post Request
         public dynamic sendPost(string post_data, string uri)

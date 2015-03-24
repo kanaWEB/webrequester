@@ -57,6 +57,7 @@ namespace WebRequester
             TypeConverter keyConverter = TypeDescriptor.GetConverter(typeof(System.Windows.Input.Key));
             try { 
             this.HotKeyCode = (System.Windows.Input.Key)keyConverter.ConvertFromString(this.keysArray[this.keysArray.Length - 1]);
+            this.error = false;
             }
             catch (Exception E)
             {

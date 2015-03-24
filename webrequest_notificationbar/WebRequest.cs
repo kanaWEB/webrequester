@@ -64,8 +64,8 @@ namespace WebRequester
             if (Properties.Settings.Default.FirstStart)
             {
                 showConfiguration();
+               
             }
-
             
             HotKey_ON.StringToHotKeys(Properties.Settings.Default.ON_HOTKEY);
             HotKey_OFF.StringToHotKeys(Properties.Settings.Default.OFF_HOTKEY);

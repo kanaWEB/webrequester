@@ -14,8 +14,8 @@ namespace WebRequester
         public void OnBoot(bool StartOnBoot)
         {
             //Put our application in the registry to make it available at boot
-            string AppName = AppDomain.CurrentDomain.DomainManager.EntryAssembly.GetName().Name;
-            string Path = AppDomain.CurrentDomain.DomainManager.EntryAssembly.Location;
+            string AppName = System.Reflection.Assembly.GetExecutingAssembly().GetName().Name;
+            string Path = System.Reflection.Assembly.GetExecutingAssembly().Location;
             //Console.WriteLine(AppName);
             //Console.WriteLine(Path);
 
